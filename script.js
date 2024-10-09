@@ -217,7 +217,7 @@ const reviews = [
         name: "chc",
         username: "@chc",
         body: "Fake it till you make it",
-        img: "/chchchchc1023.github.io/images/touxiang.jpg", // 修改路径
+        img: "https://raw.githubusercontent.com/chchchchc1023/chchchchc1023.github.io/refs/heads/main/images/touxiang.JPG", // 修改路径
     },
     {
         name: "mzl",
