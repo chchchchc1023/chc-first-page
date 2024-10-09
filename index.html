@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专注时钟</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="timer-container">
+                <h1>专注时钟</h1>
+                
+                <div class="timer-settings">
+                    <input type="range" id="timeSlider" min="1" max="60" value="25">
+                    <span id="timeDisplay">25:00</span>
+                    
+                    <div class="task-type-container">
+                        <select id="taskType">
+                            <option value="工作">工作</option>
+                            <option value="休息">休息</option>
+                            <option value="学习">学习</option>
+                            <option value="锻炼">锻炼</option>
+                            <option value="自定义">自定义</option>
+                        </select>
+                        <button id="deleteTaskType" class="delete-button">×</button>
+                        <div class="custom-input-container">
+                            <input type="text" id="customTaskType" placeholder="输入自定义类型并回车">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="timerDisplay" class="timer-display">25:00</div>
+                
+                <div class="button-group">
+                    <button id="startButton" class="primary-button">开始</button>
+                    <button id="endEarlyButton" class="secondary-button">结束</button>
+                    <button id="resetButton" class="secondary-button">重置</button>
+                </div>
+            </div>
+            
+            <div class="record-container">
+                <h2>专注记录</h2>
+                <table id="recordTable">
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>设定</th>
+                            <th>实际</th>
+                            <th>完成</th>
+                            <th>操作</th> <!-- 新增列 -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 记录将在这里动态添加 -->
+                    </tbody>
+                </table>
+                <button id="exportButton" class="secondary-button">导出记录</button>
+            </div>
+        </div>
+        
+        <!-- 将评论展示区域移到这里 -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- 第一行评论 -->
+                <div class="marquee-row">
+                    <!-- 评论卡片将在这里动态添加 -->
+                </div>
+                <!-- 第二行评论 -->
+                <div class="marquee-row reverse">
+                    <!-- 评论卡片将在这里动态添加 -->
+                </div>
+            </div>
+            <div class="gradient-overlay left"></div>
+            <div class="gradient-overlay right"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
